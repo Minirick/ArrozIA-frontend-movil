@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LoginApp</string>
+    <string name="username_hint">Nombre de usuario</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_button_text">Iniciar sesión</string>
+    <string name="forgot_password_button_text">Recuperar contraseña</string>
+    <string name="navigation_drawer_open">Abrir menú de navegación</string>
+    <string name="navigation_drawer_close">Cerrar menú de navegación</string>
+</resources>
