@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <!-- Contenedor Semitransparente -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="487dp"
         android:layout_height="431dp"
@@ -15,14 +16,15 @@
         android:background="@drawable/semitransparent_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3">
+        app:layout_constraintTop_toTopOf="parent">
 
         <!-- Título de la App -->
 
         <!-- Username Field -->
+
+        <!-- Password Field -->
 
         <TextView
             android:id="@+id/appTitle"
@@ -36,12 +38,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/usernameEditText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.224"
+            app:layout_constraintHorizontal_bias="0.421"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.5" />
-
-        <!-- Password Field -->
 
         <EditText
             android:id="@+id/usernameEditText"
@@ -98,5 +98,17 @@
         <!-- Forgot Password Button -->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
