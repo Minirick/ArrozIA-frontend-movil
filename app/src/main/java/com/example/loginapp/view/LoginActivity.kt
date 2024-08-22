@@ -1,23 +1,28 @@
-package com.example.loginapp
+package com.example.loginapp.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.loginapp.R
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
         // Referencias a los elementos de la UI
         val usernameEditText = findViewById<EditText>(R.id.usernameEditText)
         val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
         val loginButton = findViewById<Button>(R.id.loginButton)
-        val forgotPasswordButton = findViewById<Button>(R.id.forgotPasswordButton)
+
+        // Credenciales temporales para la autenticación
+        val correctUsername = "admin"
+        val correctPassword = "password123"
 
         // Manejar el evento de clic del botón de iniciar sesión
         loginButton.setOnClickListener {
@@ -26,16 +31,20 @@ class MainActivity : AppCompatActivity() {
 
             if (username.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show()
+            } else if (username == correctUsername && password == correctPassword) {
+                // Redirigir a HomeActivity si las credenciales son correctas
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                finish() // Cierra la LoginActivity para que no vuelva al presionar atrás
             } else {
-                Toast.makeText(this, "Iniciando sesión...", Toast.LENGTH_SHORT).show()
-                // Aquí iría la llamada al API para autenticar al usuario
+                Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show()
             }
         }
 
         // Manejar el evento de clic del botón de recuperar contraseña
-        forgotPasswordButton.setOnClickListener {
+        /*forgotPasswordButton.setOnClickListener {
             showForgotPasswordDialog()
-        }
+        }*/
     }
 
     private fun showForgotPasswordDialog() {

@@ -13,9 +13,9 @@
         android:theme="@style/Theme.LoginApp"
         tools:targetApi="31">
 
-        <!-- MainActivity configurada como la actividad principal -->
+        <!-- LoginActivity configurada como la actividad principal -->
         <activity
-            android:name=".MainActivity"
+            android:name=".view.LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.LoginApp">
@@ -26,11 +26,14 @@
         </activity>
 
         <!-- Aquí se añade HomeActivity -->
-        <activity android:name=".HomeActivity"
+        <activity android:name=".view.HomeActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.LoginApp"/>
 
+        <activity android:name=".view.RolesActivity" />
+        <activity android:name=".view.PermissionsActivity" />
+        <activity android:name=".view.UserActivity" />
     </application>
 
 </manifest>

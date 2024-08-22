@@ -1,9 +1,11 @@
-package com.example.loginapp
+package com.example.loginapp.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.loginapp.R
 import com.google.android.material.navigation.NavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -17,7 +19,8 @@ class HomeActivity : AppCompatActivity() {
         drawerLayout = findViewById(R.id.drawer_layout)
 
         val toggle = ActionBarDrawerToggle(
-            this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+            this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close
+        )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
@@ -25,22 +28,32 @@ class HomeActivity : AppCompatActivity() {
 
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener { menuItem ->
-            // Manejar los clics en los elementos del menú
             when (menuItem.itemId) {
                 R.id.nav_dashboard -> {
-                    // Lógica para abrir el Dashboard
-                }
-                R.id.nav_login -> {
-                    // Lógica para abrir la Vista Login
+                    // Redirigir a DashboardActivity
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
                 }
                 R.id.nav_roles -> {
-                    // Lógica para abrir la Vista Roles
+                    // Redirigir a RolesActivity
+                    val intent = Intent(this, RolesActivity::class.java)
+                    startActivity(intent)
                 }
                 R.id.nav_permissions -> {
-                    // Lógica para abrir la Vista Permiso
+                    // Redirigir a PermissionsActivity
+                    val intent = Intent(this, PermissionsActivity::class.java)
+                    startActivity(intent)
                 }
                 R.id.nav_user -> {
-                    // Lógica para abrir la Vista de Usuario
+                    // Redirigir a UserActivity
+                    val intent = Intent(this, UserActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_logout -> {
+                    // Cerrar sesión y volver a LoginActivity
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish() // Cierra el HomeActivity para que no se pueda volver al presionar atrás
                 }
             }
             drawerLayout.closeDrawers()
