@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Cambia el tema para que herede de un tema AppCompat -->
-    <style name="Theme.LoginApp" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.LoginApp" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Personaliza tu tema aquí, si es necesario -->
     </style>
 

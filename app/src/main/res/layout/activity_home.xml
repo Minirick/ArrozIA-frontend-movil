@@ -9,21 +9,62 @@
     tools:context=".view.HomeActivity">
 
     <!-- Contenido Principal -->
+
+    <!-- Panel Desplegable -->
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background_white">
+
+        <!-- Imagen de Fondo -->
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_image" />
+
+        <LinearLayout
+            android:id="@+id/center_box"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:elevation="8dp">
+
+            <!-- Aquí puedes añadir contenido al cuadro blanco, como texto o imágenes -->
+            <ImageView
+                android:id="@+id/center_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/grafico" />
+
+        </LinearLayout>
+
+        <!-- Botón de Menú -->
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="54dp"
+            android:layout_height="44dp"
+            android:layout_gravity="start|top"
+            android:layout_margin="9dp"
+            android:background="@null"
+            android:contentDescription="@string/open_menu"
+            android:src="@drawable/ic_menu" />
 
         <!-- Puedes incluir tu fragment o layout principal aquí -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bienvenido al Home"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:text="Bienvenido al Home" />
 
     </FrameLayout>
 
-    <!-- Panel Desplegable -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -31,5 +72,7 @@
         android:layout_gravity="start"
         app:menu="@menu/drawer_menu"
         android:background="@android:color/white"/>
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

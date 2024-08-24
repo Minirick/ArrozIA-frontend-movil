@@ -2,7 +2,7 @@ package com.example.loginapp.view
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.ActionBarDrawerToggle
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.loginapp.R
@@ -18,13 +18,12 @@ class HomeActivity : AppCompatActivity() {
 
         drawerLayout = findViewById(R.id.drawer_layout)
 
-        val toggle = ActionBarDrawerToggle(
-            this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close
-        )
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
+        val menuButton: ImageButton = findViewById(R.id.menu_button)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        // Configurar el botón de menú para abrir el DrawerLayout
+        menuButton.setOnClickListener {
+            drawerLayout.openDrawer(findViewById(R.id.nav_view))
+        }
 
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener { menuItem ->
