@@ -10,7 +10,7 @@ class AuthController(private val context: Context) {
     // Lógica para iniciar sesión
     fun login(username: String, password: String): Boolean {
         val correctUsername = "admin"
-        val correctPassword = "password123"
+        val correctPassword = "1234"
 
         return if (username == correctUsername && password == correctPassword) {
             val intent = Intent(context, HomeActivity::class.java)

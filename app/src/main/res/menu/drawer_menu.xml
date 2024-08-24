@@ -1,22 +1,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/nav_dashboard"
-        android:icon="@drawable/ic_dashboard"
-        android:title="Dashboard" />
-    <item
-        android:id="@+id/nav_roles"
-        android:icon="@drawable/ic_roles"
-        android:title="Vista Roles" />
-    <item
-        android:id="@+id/nav_permissions"
-        android:icon="@drawable/ic_permissions"
-        android:title="Vista Permiso" />
-    <item
-        android:id="@+id/nav_user"
-        android:icon="@drawable/ic_user"
-        android:title="Vista de Usuario" />
-    <item
-        android:id="@+id/nav_logout"
-        android:icon="@drawable/ic_logout"
-        android:title="Cerrar Sesión" />
+    <!-- Grupo de los elementos principales del menú -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/nav_roles"
+            android:icon="@drawable/ic_roles"
+            android:title="Roles" />
+        <item
+            android:id="@+id/nav_permissions"
+            android:icon="@drawable/ic_permissions"
+            android:title="Permiso" />
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@drawable/ic_user"
+            android:title="Usuario" />
+    </group>
+
+
+    <!-- Grupo para el botón de Cerrar Sesión -->
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Cerrar Sesión"
+            android:textColor="@color/red"/>
+    </group>
 </menu>
