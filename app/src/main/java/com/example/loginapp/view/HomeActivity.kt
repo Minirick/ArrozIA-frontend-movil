@@ -28,9 +28,10 @@ class HomeActivity : AppCompatActivity() {
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
+                // Reemplazar esta línea en el listener del menú de navegación
                 R.id.nav_dashboard -> {
                     // Redirigir a DashboardActivity
-                    val intent = Intent(this, HomeActivity::class.java)
+                    val intent = Intent(this, DashboardActivity::class.java)
                     startActivity(intent)
                 }
                 R.id.nav_roles -> {
