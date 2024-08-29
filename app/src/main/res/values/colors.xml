@@ -1,0 +1,11 @@
+<resources>
+    <color name="background_white">#FFFFFF</color> <!-- Fondo blanco para la app -->
+    <color name="text_black">#000000</color> <!-- Texto en negro -->
+    <color name="primary_green">#4CAF50</color> <!-- Verde para otros elementos -->
+    <color name="grass_green">#388E3C</color> <!-- Verde césped para los botones -->
+    <color name="button_text_white">#FFFFFF</color> <!-- Blanco para el texto de los botones -->
+    <color name="shadow_gray">#B0BEC5</color> <!-- Gris suave para la sombra -->
+    <color name="primary_background">#4CAF50</color> <!-- Un ejemplo de color -->
+    <color name="primary_color">#4CAF50</color>
+    <color name="red">#FF0000</color>
+</resources>

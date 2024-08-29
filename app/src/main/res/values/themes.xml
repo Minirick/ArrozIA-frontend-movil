@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Cambia el tema para que herede de un tema AppCompat -->
+    <style name="Theme.LoginApp" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Personaliza tu tema aquí, si es necesario -->
+    </style>
+
+</resources>

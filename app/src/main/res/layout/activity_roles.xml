@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/button_back_to_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver a Inicio"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/roleNameEditText" />
+
+    <EditText
+        android:id="@+id/roleNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del Rol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_back_to_home" />
+
+    <EditText
+        android:id="@+id/roleDescriptionEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Descripción"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roleNameEditText"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/addRoleButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Agregar Rol"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roleDescriptionEditText"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/updateRoleButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Rol"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addRoleButton"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/deleteRoleButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Rol"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updateRoleButton"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"/>
+
+    <ListView
+        android:id="@+id/roleListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deleteRoleButton"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
