@@ -19,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
         val usernameEditText = findViewById<EditText>(R.id.usernameEditText)
         val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
         val loginButton = findViewById<Button>(R.id.loginButton)
+        val forgotPasswordButton = findViewById<Button>(R.id.forgotPasswordButton) // Referencia al botón de recuperar contraseña
 
         // Credenciales temporales para la autenticación
         val correctUsername = "admin"
@@ -42,9 +43,9 @@ class LoginActivity : AppCompatActivity() {
         }
 
         // Manejar el evento de clic del botón de recuperar contraseña
-        /*forgotPasswordButton.setOnClickListener {
+        forgotPasswordButton.setOnClickListener {
             showForgotPasswordDialog()
-        }*/
+        }
     }
 
     private fun showForgotPasswordDialog() {
