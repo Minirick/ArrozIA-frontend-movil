@@ -69,5 +69,17 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // JUnit 4 para pruebas unitarias
+    testImplementation("junit:junit:4.13.2")
+
+// (Opcional) Mockito para pruebas unitarias si necesitas hacer mocking
+    testImplementation("org.mockito:mockito-core:3.12.4")
+
+// (Opcional) AndroidX Test para pruebas instrumentadas en Android
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+
 }
 
