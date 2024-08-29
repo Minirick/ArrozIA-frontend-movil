@@ -2,7 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ArrozIA-frontend-movil" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ArrozIA-frontend-movil/ArrozIA-frontend-movil" vcs="Git" />
   </component>
 </project>
