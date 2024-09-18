@@ -14,13 +14,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginApp"
+        android:enableOnBackInvokedCallback="true"
         tools:targetApi="31">
 
-        <!-- Actividades declaradas -->
-        <activity android:name=".view.DashboardActivity" android:exported="false"/>
-        <activity android:name=".view.RolesActivity" android:exported="false"/>
-        <activity android:name=".view.PermissionsActivity" android:exported="false"/>
-        <activity android:name=".view.UserActivity" android:exported="false"/>
+        <meta-data
+            android:name="com.mapbox_access_token"
+            android:value="sk.eyJ1IjoiYmpsZyIsImEiOiJjbTB5MzIzMmowanA5MmpwdTlnbm13N21pIn0.dqfiLM_LyGtROfc3A_uf6Q"/>
+
+        <!-- Declarar las actividades -->
+        <activity android:name=".view.DashboardActivity" android:exported="false" />
+        <activity android:name=".view.RolesActivity" android:exported="false" />
+        <activity android:name=".view.PermissionsActivity" android:exported="false" />
+        <activity android:name=".view.UserActivity" android:exported="false" />
+        <activity android:name=".view.FarmActivity" android:exported="false" />
+        <activity android:name=".view.FarmListActivity" android:exported="false" />
 
         <!-- LoginActivity configurada como la actividad principal -->
         <activity
@@ -35,11 +42,10 @@
         </activity>
 
         <!-- HomeActivity configurada como actividad secundaria -->
-        <activity android:name=".view.HomeActivity"
+        <activity
+            android:name=".view.HomeActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.LoginApp"/>
-
     </application>
-
 </manifest>

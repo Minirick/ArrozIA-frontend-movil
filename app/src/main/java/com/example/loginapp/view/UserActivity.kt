@@ -2,12 +2,12 @@ package com.example.loginapp.view
 
 import android.os.Bundle
 import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
 import com.example.loginapp.R
 import com.example.loginapp.controller.UserController
 import com.example.loginapp.model.User
 
-class UserActivity : AppCompatActivity() {
+// Hacer que UserActivity herede de BaseActivity para reutilizar el DrawerLayout y NavigationView
+class UserActivity : BaseActivity() {
 
     private lateinit var userController: UserController
     private lateinit var userListView: ListView
@@ -22,6 +22,9 @@ class UserActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user)
+
+        // Configurar el DrawerLayout y NavigationView (esto ya se maneja en BaseActivity)
+        setupDrawerMenu()
 
         userController = UserController()
 

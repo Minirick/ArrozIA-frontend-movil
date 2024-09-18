@@ -5,12 +5,11 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.example.loginapp.R
 import com.example.loginapp.controller.PermissionsController
 import com.example.loginapp.model.Permission
 
-class PermissionsActivity : AppCompatActivity() {
+class PermissionsActivity : BaseActivity() { // Heredar de BaseActivity
 
     private lateinit var permissionsController: PermissionsController
     private lateinit var permissionListView: ListView
@@ -24,8 +23,11 @@ class PermissionsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_permissions)
 
-        permissionsController = PermissionsController()
+        // Inicializar el DrawerLayout y NavigationView
+        setupDrawer()
 
+        // Inicializar controlador y vistas
+        permissionsController = PermissionsController()
         permissionListView = findViewById(R.id.permissionListView)
         addButton = findViewById(R.id.addButton)
         updateButton = findViewById(R.id.updateButton)
@@ -33,7 +35,6 @@ class PermissionsActivity : AppCompatActivity() {
         nameEditText = findViewById(R.id.nameEditText)
         descriptionEditText = findViewById(R.id.descriptionEditText)
 
-        // Inicializar la lista de permisos
         loadPermissions()
 
         addButton.setOnClickListener {
@@ -80,19 +81,15 @@ class PermissionsActivity : AppCompatActivity() {
     }
 
     private fun loadPermissions() {
-        // Cargar los permisos en el ListView
         val permissions = permissionsController.getAllPermissions()
         // Aquí debes conectar el ListView con un adaptador para mostrar los permisos
     }
 
     private fun getSelectedPermission(): Permission? {
-        // Obtener el permiso seleccionado en la lista
-        // Implementa esta función para obtener el permiso que el usuario ha seleccionado en el ListView
-        return null // Cambia esto para que devuelva el permiso seleccionado
+        return null // Implementar la lógica para obtener el permiso seleccionado
     }
 
     private fun generateId(): Int {
-        // Generar un ID único para el nuevo permiso
         return permissionsController.getAllPermissions().size + 1
     }
 

@@ -17,6 +17,12 @@
             android:id="@+id/nav_user"
             android:icon="@drawable/ic_user"
             android:title="Usuario" />
+        <item
+            android:id="@+id/nav_farm"
+            android:icon="@drawable/ic_farm"
+            android:title="Finca" />
+
+
     </group>
 
 

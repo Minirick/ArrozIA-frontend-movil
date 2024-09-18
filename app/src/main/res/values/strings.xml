@@ -7,4 +7,25 @@
     <string name="navigation_drawer_open">Abrir menú de navegación</string>
     <string name="navigation_drawer_close">Cerrar menú de navegación</string>
     <string name="open_menu">Abrir Menú</string>
+
+    <string-array name="area_formats">
+        <item>m²</item>
+        <item>hectáreas</item>
+        <item>acres</item>
+    </string-array>
+
+    <string-array name="area_units">
+        <item>m²</item>
+        <item>hectáreas</item>
+        <item>acres</item>
+    </string-array>
+
+    <string-array name="units_array">
+        <item>m²</item>
+        <item>hectáreas</item>
+        <item>acres</item>
+    </string-array>
+
+
+
 </resources>
