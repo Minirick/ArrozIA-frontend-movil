@@ -1,15 +1,14 @@
 package com.example.loginapp.view
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.loginapp.R
-import com.example.loginapp.controller.UserController // Asegúrate de que esta línea esté presente
+import com.example.loginapp.controller.UserController
 import com.example.loginapp.model.User
-import com.example.loginapp.view.adapter.UserAdapter
+import com.example.loginapp.adapter.UserAdapter
 
-class DashboardActivity : AppCompatActivity() {
+class DashboardActivity : BaseActivity() {
 
     private lateinit var usersController: UserController
     private lateinit var recyclerView: RecyclerView
@@ -18,6 +17,9 @@ class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+
+        // Configurar el DrawerLayout y NavigationView
+        setupDrawer()
 
         // Inicializar controlador de usuarios
         usersController = UserController()

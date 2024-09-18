@@ -37,6 +37,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
+        viewBinding = true
         compose = true
     }
     composeOptions {
@@ -48,6 +49,7 @@ android {
         }
     }
 }
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -58,8 +60,9 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.drawerlayout)  // Usar la referencia del catalogo de versiones
-    implementation(libs.google.material)        // Usar la referencia del catalogo de versiones
+    implementation(libs.androidx.drawerlayout)
+    implementation(libs.google.material)
+    implementation(libs.play.services.maps)
 
     // Dependencias de prueba
     testImplementation(libs.junit)
@@ -73,14 +76,10 @@ dependencies {
     // JUnit 4 para pruebas unitarias
     testImplementation("junit:junit:4.13.2")
 
-// (Opcional) Mockito para pruebas unitarias si necesitas hacer mocking
+    // (Opcional) Mockito para pruebas unitarias si necesitas hacer mocking
     testImplementation("org.mockito:mockito-core:3.12.4")
 
-// (Opcional) AndroidX Test para pruebas instrumentadas en Android
+    // (Opcional) AndroidX Test para pruebas instrumentadas en Android
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-
-
 }
-

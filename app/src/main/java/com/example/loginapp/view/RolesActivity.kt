@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.example.loginapp.R
 import com.example.loginapp.controller.RolesController
 import com.example.loginapp.model.Role
 
-class RolesActivity : AppCompatActivity() {
+// Hacer que RolesActivity herede de BaseActivity para reutilizar el DrawerLayout
+class RolesActivity : BaseActivity() {
 
     private lateinit var rolesController: RolesController
     private lateinit var addButton: Button
@@ -20,8 +20,14 @@ class RolesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Reutilizamos el layout que tiene el DrawerLayout
         setContentView(R.layout.activity_roles)
 
+        // Configurar el DrawerLayout y NavigationView
+        setupDrawerMenu()
+
+        // Inicializar el controlador de roles y las vistas
         rolesController = RolesController()
 
         addButton = findViewById(R.id.addButton)
@@ -29,6 +35,7 @@ class RolesActivity : AppCompatActivity() {
         deleteButton = findViewById(R.id.deleteButton)
         nameEditText = findViewById(R.id.nameEditText)
 
+        // Configuración de los botones de añadir, actualizar y eliminar
         addButton.setOnClickListener {
             val name = nameEditText.text.toString()
             if (name.isNotEmpty()) {
@@ -64,11 +71,12 @@ class RolesActivity : AppCompatActivity() {
         }
     }
 
+    // Función para generar un ID único para un nuevo rol
     private fun generateId(): Int {
-        // Generar un ID único para el nuevo rol
         return rolesController.getRoles().size + 1
     }
 
+    // Función para limpiar los campos después de agregar, actualizar o eliminar un rol
     private fun clearFields() {
         nameEditText.text.clear()
         selectedRole = null
